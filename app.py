@@ -20,7 +20,7 @@ page_bg_img = """
     </style>
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
-image1 = Image.open('imagenes/image1.png')
+image1 = Image.open('/imagenes/image1.png')
 
 # Añadimos un panel de control
 tab1, tab2, tab3 = st.tabs([":blue[**INICIO**]", ":blue[_**ANÁLISIS A NIVEL NACIONAL**_]", ":blue[_**ANÁLISIS A NIVEL DEPARTAMENTAL**_]"])
