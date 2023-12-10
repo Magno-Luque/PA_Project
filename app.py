@@ -7,7 +7,7 @@ from analisis_magnitud_1 import mostrar_dashboard
 page_bg_img = f"""
     <style>
     [data-testid="stAppViewContainer"] > .main {{
-        background-image: url("https://img.freepik.com/premium-photo/wood-desk-wood-floor-with-sea-beach-sand-blue-background-summer-background_35652-2616.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699747200&semt=ais");
+        background-image: url("https://raw.githubusercontent.com/Magno-Luque/PA_Project/main/imagenes/image2.jpg");
         background-size: cover;
         background-position: center;
         background-attachment: local;
