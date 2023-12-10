@@ -1,2 +1,2 @@
 # Project_PA
-Pagina web correspondiente al proyecto de Programacion Avanzada 2023_2
+Página web correspondiente al proyecto del curso Programacion Avanzada 2023_2
