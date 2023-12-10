@@ -31,7 +31,7 @@ def visualizacion_a_nivel_nacional(archivo):
     st.markdown("<h2 style='text-align: left; color: #90ee90; font-family: monospace;'>Mapa de calor de eventos sísmicos por concurrencia en zonas geográficas y distribución por profundidad</h2>", unsafe_allow_html=True)
 
     st.markdown(
-        '<div style="background-color: white; padding: 10px; border: 5px;">'
+        '<div style="background-color: white; padding: 10px; border-radius: 10px;">'
         '<h>En esta sección, se presenta el análisis de la concurrencia de eventos sísmicos mediante un mapa de calor, '
         'junto con la distribución de estos por profundidad. Esta última, ya sea superficial, intermedia'
         ' o profunda, influye en la forma en que el sismo afecta a la superficie, por ende, el potencial destructivo.'
@@ -188,7 +188,7 @@ def visualizacion_a_nivel_nacional(archivo):
                 mapa.get_root().html.add_child(legend)
                 st.markdown(
                     """
-                    <div style="color: white;">
+                    <div style="background-color: white; padding: 10px; border-radius: 10px;">
                         <p>
                             Una vez seleccionada la fecha, podrás observar dos gráficos. El primero es un mapa con ubicaciones marcadas,
                             mientras que el segundo es un gráfico de barras. La información sobre la frecuencia de eventos se presenta en
@@ -255,7 +255,7 @@ def visualizacion_a_nivel_nacional(archivo):
                 st.plotly_chart(fig)
                 st.subheader("Después de visualizar el mapa y el gráfico de barras, se detalla lo siguiente: ") 
                 st.write(
-                    f'<div style="color: white;">'
+                    f'<div style="background-color: white; padding: 10px; border-radius: 10px;">'
                     f'<h> De este modo se observa que {texto_max} <span style="color: red;">{texto_max2}</span>, resalta la presencia de eventos sísmicos a un nivel de profundidad'
                     f' <span style="color: red;">{nivel_mostrar}</span>, calculados desde el hipocentro hasta la capa superficial de la tierra, en comparación con las demás.'
                     f' Y esta, contabiliza un total de <span style="color: red;">{numero_mostrar}</span> puntos de evento. De manera tal, se puede inferir'
