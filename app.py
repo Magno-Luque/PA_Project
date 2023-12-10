@@ -20,7 +20,7 @@ image1 = Image.open('imagenes/image1.png')
 
 
 # Añadimos un panel de control
-tab1, tab2, tab3 = st.tabs([":blue[**INICIO**] :derelict_house_building:", ":blue[_Análisis a nivel nacional_]", ":blue[_Análisis a nivel departamental_]"])
+tab1, tab2, tab3 = st.tabs([":blue[**INICIO**] :derelict_house_building:", ":blue[_ANÁLISIS A NIVEL NACIONAL_]", ":blue[_ANÁLISIS A NIVEL DEPARTAMENTAL_]"])
 
 with tab1:
     st.image(image1)
