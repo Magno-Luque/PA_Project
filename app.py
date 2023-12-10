@@ -28,8 +28,8 @@ with tab1:
 # Análisis a nivel nacional
 with tab2:
     visualizacion_a_nivel_nacional("Catalogo1960_2022.csv")
-
-
+    mostrar_dashboard("Catalogo1960_2022.csv")
+    
 # Análisis a nivel departamental
 with tab3:
     st.header("Análisis Departamental")
