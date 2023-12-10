@@ -16,7 +16,7 @@ page_bg_img = f"""
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-image = Image.open('imagenes/image.png')
+image1 = Image.open('imagenes/image1.png')
 
 
 # Añadimos un panel de control
