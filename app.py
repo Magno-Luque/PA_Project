@@ -20,7 +20,7 @@ page_bg_img = """
     </style>
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
-image1 = Image.open('Imagen_Mapa_Peru.jpeg')
+image1 = Image.open('imagenes/image1.png')
 
 # Añadimos un panel de control
 tab1, tab2, tab3 = st.tabs([":blue[**INICIO**]", ":blue[_**ANÁLISIS A NIVEL NACIONAL**_]", ":blue[_**ANÁLISIS A NIVEL DEPARTAMENTAL**_]"])
@@ -30,7 +30,7 @@ with tab1:
     color = '#ba55d3'  
     st.markdown(f'<h1 style="color:{color}; font-family: Cooper Black, sans-serif;">ANÁLISIS SÍSMICO REGISTRADOS EN EL PERÚ (1960_2022)</h1>', unsafe_allow_html=True)
 
-    st.image(imagenes/image1.png)
+    st.image(image1)
 
 # Análisis a nivel nacional
 with tab2:
