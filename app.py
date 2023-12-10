@@ -8,18 +8,19 @@ st.set_page_config(
     page_icon="volcano",
     initial_sidebar_state="expanded",
 )
-
-page_bg_img = """
+        #background-image: url("https://raw.githubusercontent.com/gcdavidq/Project_PA/main/imagenes/image2.jpg");
+page_bg_img = f"""
     <style>
-    [data-testid="stAppViewContainer"] > .main {
-        background-image: url("https://raw.githubusercontent.com/gcdavidq/Project_PA/main/imagenes/image2.jpg");
+    [data-testid="stAppViewContainer"] > .main {{
+        background-image: url("https://img.freepik.com/premium-photo/wood-desk-wood-floor-with-sea-beach-sand-blue-background-summer-background_35652-2616.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699747200&semt=ais");
         background-size: cover;
         background-position: center;
-        background-attachment: fixed;
-    }
+        background-attachment: local;
+    }}
     </style>
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
 image1 = Image.open('imagenes/image1.png')
 
 # Añadimos un panel de control
