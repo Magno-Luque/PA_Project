@@ -30,7 +30,7 @@ with tab1:
     color = '#ba55d3'  
     st.markdown(f'<h1 style="color:{color}; font-family: Cooper Black, sans-serif;">ANÁLISIS SÍSMICO REGISTRADOS EN EL PERÚ (1960_2022)</h1>', unsafe_allow_html=True)
 
-    st.image(image1)
+    st.image(imagenes/image1.png)
 
 # Análisis a nivel nacional
 with tab2:
