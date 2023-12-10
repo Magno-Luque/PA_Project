@@ -31,7 +31,7 @@ def visualizacion_a_nivel_nacional(archivo):
     st.markdown("<h2 style='text-align: left; color: #90ee90; font-family: monospace;'>Mapa de calor de eventos sísmicos por concurrencia en zonas geográficas y distribución por profundidad</h2>", unsafe_allow_html=True)
 
     st.markdown(
-        '<div style="color: white;">'
+        '<div style="background-color: white; padding: 10px;">'
         '<h>En esta sección, se presenta el análisis de la concurrencia de eventos sísmicos mediante un mapa de calor, '
         'junto con la distribución de estos por profundidad. Esta última, ya sea superficial, intermedia'
         ' o profunda, influye en la forma en que el sismo afecta a la superficie, por ende, el potencial destructivo.'
