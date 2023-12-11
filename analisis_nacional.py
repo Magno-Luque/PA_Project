@@ -220,9 +220,7 @@ def visualizacion_a_nivel_nacional(archivo):
                 conteo_rangos_profundidad_filtrado = pd.cut(df_filtrado_opcion['PROFUNDIDAD'],bins=[0,70,300,max_prof]).value_counts().sort_index()
                 df_conteo_rangos_profundidad_filtrado = pd.DataFrame({'RANGO_PROFUNDIDAD': [str(rango) for rango in conteo_rangos_profundidad_filtrado.index],
                                                                             'FRECUENCIA_PROFUNDIDAD': conteo_rangos_profundidad_filtrado.values})
-
-
-                
+    
                 cero, uno, dos = df_conteo_rangos_profundidad_filtrado['FRECUENCIA_PROFUNDIDAD']
                 nivel_mostrar = "superficial"
                 numero_mostrar = cero
@@ -286,8 +284,8 @@ def mostrar_dashboard(archivo_excel):
     min_year = df['Año'].astype(int).min()
     max_year = df['Año'].astype(int).max()
     #----------------------------------------------------------------------------
-    st.subheader(' MAGNITUD DE LOS SISMOS TOMANDO EN CUENTA LOS AÑOS')
-    st.text("SELECCIONE EL RANGO DE AÑOS EN EL QUE DESEA VER EL GRAFICO DE MAGNITUD")
+    st.subheader("MAGNITUD DE LOS SISMOS TOMANDO EN CUENTA LOS AÑOS")
+    st.text("SELECCIONE EL RANGO DE AÑOS EN EL QUE DESEA VER EL GRÁFICO DE MAGNITUD")
     selected_year = st.slider('Seleccione:',
                                     min_value=min_year,
                                     max_value=max_year,
@@ -339,7 +337,8 @@ def mostrar_dashboard(archivo_excel):
 
     # Gráfico de barras
     if tipo_grafico == "Gráfico de Barras":
-        st.text("GRAFICO DE BARRAS DE LOS RANGOS DE MAGNITUD PRESENTES EN LOS SISMOS RESPECTO A LOS AÑOS SELECCIONADOS")
+        st.text("GRÁFICO DE BARRAS DE LOS RANGOS DE MAGNITUD PRESENTES EN LOS SISMOS RESPECTO\n"
+        " A LOS AÑOS SELECCIONADOS")
         st.plotly_chart(fig_)
 
     # Gráfico de líneas
