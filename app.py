@@ -31,7 +31,7 @@ with tab2:
     
 # Análisis a nivel departamental
 with tab3:
-    st.header("Análisis Departamental")
+    st.header("ANÁLISIS DEPARTAMENTAL")
     department_boundaries = load_department_boundaries()
     file_path = 'Proyecto_final.csv'
     data = load_data(file_path)
