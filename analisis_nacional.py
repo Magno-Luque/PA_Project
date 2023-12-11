@@ -307,7 +307,7 @@ def mostrar_dashboard(archivo_excel):
     
     # Crear gráfico Plotly Express con el Dataframe de Rangos actualizado
     fig_ = px.bar(df_conteo_rangos_magnitud_filtrado, x='RANGO_MAGNITUD', y='FRECUENCIA_MAGNITUD', color='RANGO_MAGNITUD', labels={'FRECUENCIA_MAGNITUD': 'Frecuencia'})
-    fig_.update_layout(title=f'Frecuencia de Sismos en Rangos de Magnitud ({selected_year[0]} - {selected_year[1]})', xaxis_title='Rango de Magnitud', yaxis_title='Frecuencia')
+    fig_.update_layout(title=f'Frecuencia de Sismos en Rangos de Magnitud ({selected_year[0]} - {selected_year[1]})', xaxis_title='Rango de Magnitud', yaxis_title='Frecuencia',height=500,width=712)
 
     #-------------------------------------------------
     # Crear un DataFrame para la frecuencia de rangos de magnitudes a lo largo de los años
