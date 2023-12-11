@@ -1,8 +1,7 @@
 import streamlit as st
 from PIL import Image
-from analisis_nacional import visualizacion_a_nivel_nacional
+from analisis_nacional import visualizacion_a_nivel_nacional, mostrar_dashboard
 from analisis_departamental import load_department_boundaries, load_data, assign_departments, show_departments_count
-from analisis_magnitud_1 import mostrar_dashboard
 
 page_bg_img = f"""
     <style>
