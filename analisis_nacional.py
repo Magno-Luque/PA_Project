@@ -27,7 +27,7 @@ def visualizacion_a_nivel_nacional(archivo):
     anios_comprendidos = []
     for i in range(min_anio, max_anio + 1):
         anios_comprendidos.append(i)
-    st.header("Mapa de calor de eventos sísmicos por concurrencia en zonas geográficas y distribución por profundidad")
+    st.header("MAPA DE CALOR DE EVENTOS SÍSMICOS POR CONCURRENCIA EN ZONAS GEOGRÁFICAS Y DISTRIBUCIÓN POR PROFUNDIDAD")
     st.markdown(
         '<div style="background-color: white; padding: 10px; border-radius: 10px;">'
         '<h>En esta sección, se presenta el análisis de la concurrencia de eventos sísmicos mediante un mapa de calor, '
