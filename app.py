@@ -19,7 +19,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 image1 = Image.open('imagenes/image1.png')
 
 
-# Añadimos un panel de control
+# Panel de control
 tab1, tab2, tab3 = st.tabs([":blue[**INICIO**] :derelict_house_building:", ":blue[_ANÁLISIS A NIVEL NACIONAL_]", ":blue[_ANÁLISIS A NIVEL DEPARTAMENTAL_]"])
 
 with tab1:
