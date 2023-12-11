@@ -5,6 +5,7 @@ import folium
 from shapely.geometry import Point
 from streamlit_folium import folium_static
 import plotly.express as px
+
 @st.cache_data
 def load_department_boundaries():
     peru_departments = gpd.read_file('departamentos_perú.geojson')
