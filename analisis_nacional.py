@@ -338,7 +338,7 @@ def mostrar_dashboard(archivo_excel):
     # Gráfico de barras
     if tipo_grafico == "Gráfico de Barras":
         st.text("GRÁFICO DE BARRAS DE LOS RANGOS DE MAGNITUD PRESENTES EN LOS SISMOS RESPECTO\n"
-        " A LOS AÑOS SELECCIONADOS")
+        "A LOS AÑOS SELECCIONADOS")
         st.plotly_chart(fig_)
 
     # Gráfico de líneas
