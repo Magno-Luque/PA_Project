@@ -10,7 +10,6 @@ from branca.colormap import linear
 import geopandas as gpd
 from shapely.geometry import Point
 
-
 # Análisis a nivel nacional
 def visualizacion_a_nivel_nacional(archivo):
     # Leemos nuestro data set
@@ -276,8 +275,7 @@ def visualizacion_a_nivel_nacional(archivo):
 
 def mostrar_dashboard(archivo_excel):
     df = pd.read_excel(archivo_excel)
-
-    # Resto del código...
+    
     # Extraer Año, Mes y Día de la columna Fecha_UTC
     df['Año'] = df['FECHA_UTC'].astype(str).str[:4]
     df['Mes'] = df['FECHA_UTC'].astype(str).str[4:6]
@@ -308,16 +306,10 @@ def mostrar_dashboard(archivo_excel):
     conteo_rangos_magnitud_filtrado = pd.cut(df_filtrado_['MAGNITUD'], bins=5).value_counts().sort_index()
     df_conteo_rangos_magnitud_filtrado = pd.DataFrame({'RANGO_MAGNITUD': [str(rango) for rango in conteo_rangos_magnitud_filtrado.index],
                                                         'FRECUENCIA_MAGNITUD': conteo_rangos_magnitud_filtrado.values})
-
-    # Mostrar los DataFrames en Streamlit
     
     # Crear gráfico Plotly Express con el Dataframe de Rangos actualizado
     fig_ = px.bar(df_conteo_rangos_magnitud_filtrado, x='RANGO_MAGNITUD', y='FRECUENCIA_MAGNITUD', color='RANGO_MAGNITUD', labels={'FRECUENCIA_MAGNITUD': 'Frecuencia'})
     fig_.update_layout(title=f'Frecuencia de Sismos en Rangos de Magnitud ({selected_year[0]} - {selected_year[1]})', xaxis_title='Rango de Magnitud', yaxis_title='Frecuencia')
-
-
-    # Mostrar el gráfico en Streamlit
-
 
     #-------------------------------------------------
     # Crear un DataFrame para la frecuencia de rangos de magnitudes a lo largo de los años
@@ -339,7 +331,6 @@ def mostrar_dashboard(archivo_excel):
 
     # Configurar diseño del gráfico de líneas
     fig_lineas_rangos_magnitudes.update_layout(xaxis_title='Rango de Magnitud', yaxis_title='Frecuencia', legend_title='Año')
-
 
     #-----------------------------------------------------------------
     #Seleccionar el tipo de grafico: 
