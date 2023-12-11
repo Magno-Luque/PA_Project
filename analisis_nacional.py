@@ -4,6 +4,12 @@ from streamlit_folium import folium_static
 from folium.plugins import HeatMap
 import plotly.express as px
 import pandas as pd
+import matplotlib.pyplot as plt
+from folium import plugins
+from branca.colormap import linear
+import geopandas as gpd
+from shapely.geometry import Point
+
 
 # Análisis a nivel nacional
 def visualizacion_a_nivel_nacional(archivo):
@@ -390,17 +396,17 @@ def mostrar_dashboard(archivo_excel):
 
     # Actualizar el mapa con los filtros de opción de selección
     if not df_filtrado_opcion.empty:
-        mapa_filtrado_opcion = folium.Map(location=[df_filtrado_opcion['LATITUD'].iloc[0], df_filtrado_opcion['LONGITUD'].iloc[0]],
+        mapa_filtrado_opcion = fl.Map(location=[df_filtrado_opcion['LATITUD'].iloc[0], df_filtrado_opcion['LONGITUD'].iloc[0]],
                                         zoom_start=10, control_scale=True, prefer_canvas=True)  # Nuevos parámetros
 
         for i, row in df_filtrado_opcion.iterrows():
             # Personalizar el icono del marcador
-            folium.Marker([row['LATITUD'], row['LONGITUD']],
+            fl.Marker([row['LATITUD'], row['LONGITUD']],
                         popup=f"MAGNITUD: {row['MAGNITUD']}",
-                        icon=folium.Icon(color='blue', icon='info-sign')).add_to(mapa_filtrado_opcion)  # Cambiar el color y el icono
+                        icon=fl.Icon(color='blue', icon='info-sign')).add_to(mapa_filtrado_opcion)  # Cambiar el color y el icono
 
         # Agregar capa adicional de Stamen Watercolor
-        folium.TileLayer('Stamen Watercolor', attr='OpenStreetMap contributors').add_to(mapa_filtrado_opcion) 
+        fl.TileLayer('Stamen Watercolor', attr='OpenStreetMap contributors').add_to(mapa_filtrado_opcion) 
         folium_static(mapa_filtrado_opcion)
     else:
         st.warning("No hay datos disponibles para los filtros seleccionados.")
